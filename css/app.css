@@ -1,0 +1,52 @@
+
+
+#center {
+	background:#f9f9f9;
+	background:rgba(240,240,240,.7);
+	width:90%;
+	padding:1em;
+	margin:1em auto;
+	border:1px solid #bbb;
+}
+
+h1.puddinghi{
+	color:orange;
+}
+
+div.jumbotron.welcome{
+	text-align: center;
+}
+
+.boxed {
+  width:250px;
+padding:10px;
+border:5px solid gray;
+margin:10px; ;
+float:left;
+height:250px;
+}
+
+.highlightedBox{
+	border:10px solid orange;
+	background-image:url("../images/subtle_dots.png");
+}
+
+h4.boxTitleHl{
+	color:orange;
+}
+
+body.bg{
+background-image:url("../images/stripes.png");
+font-family: 'Pontano Sans', sans-serif;
+
+}
+
+
+img.hide1{
+	display:none;
+}
+
+.flavor2{
+	display:none;
+}
+
