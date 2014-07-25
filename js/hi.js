@@ -18,18 +18,55 @@ $(document).ready(function() {
  		// $('#theOrder td:contains("Mint")').alert("hi");
 	});
 
+  // $(".flavor").click(function(event) {
+  //   $('.pudding-img').attr('src', 'images/flavor-strawberry.png');
+  // });
+
+  $(".flavor.strawberry").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-strawberry.png');
+  });
+
+  $(".flavor.mint").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-mint.png');
+  });
+
+  $(".flavor.hazelnut").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-hazelnut.png');
+  });
+
+  $(".flavor.orange").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-orange.png');
+  });
+
+  $(".flavor.berry").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-berry.png');
+  });
+
+  $(".flavor.banana").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-banana.png');
+  });
+
+  $(".flavor.cream").on('mouseenter', function() {
+    $('.pudding-img').attr('src', 'images/flavor-cream.png');
+  });
+
+
+  $(".flavor").on('mouseleave', function() {
+    $('.pudding-img').attr('src', 'images/pudding.png');
+  });
+
 	// if update the quantity of items
 	// this only works with already existing items so far
 	$('#theOrder').on('keyup', '.form-control', calcPrice);
 
   	
   	// switch logo on click
-  	$('#my_image').on('mouseenter',function(){
+  	$('.logo').on('mouseenter',function(){
         $(this).attr('src', 'images/logo2.png');
 
 	});
 
-	$('#my_image').on('mouseleave',function(){
+	$('.logo').on('mouseleave',function(){
 	        $(this).attr('src', 'images/logo3.png');
 
 	});

@@ -1,0 +1,183 @@
+$orange: #FFAE19;
+
+#center {
+  background:#f9f9f9;
+  background:rgba(240,240,240,.7);
+  width:90%;
+  padding:1em;
+  margin:1em auto;
+  border:1px solid #bbb;
+}
+
+h1.puddinghi{
+  color:$orange;
+}
+
+.header {
+  text-align: center;
+  background-color: #F5F5F5;
+  margin: 1%;
+  padding: 15px;
+}
+
+.boxed {
+  width:250px;
+  padding:10px;
+  border:5px solid gray;
+  margin:10px;
+  float:left;
+  height:250px;
+}
+
+.highlightedBox{
+  border:10px solid $orange;
+  background-image:url("../images/subtle_dots.png");
+}
+
+h4.boxTitleHl{
+  color:$orange;
+}
+
+body.bg{
+background-image:url("../images/stripes.png");
+font-family: 'Pontano Sans', sans-serif;
+
+}
+
+
+img.hide1{
+  display:none;
+}
+
+.flavor2{
+  display:none;
+}
+
+
+.button {
+ border-top: 1px solid #ffffff;
+ background: $orange;
+ background: -webkit-gradient(linear, left top, left bottom, from($orange), to($orange));
+ background: -webkit-linear-gradient(top, $orange, $orange);
+ background: -moz-linear-gradient(top, $orange, $orange);
+ background: -ms-linear-gradient(top, $orange, $orange);
+ background: -o-linear-gradient(top, $orange, $orange);
+ padding: 8.5px 17px;
+ -webkit-border-radius: 11px;
+ -moz-border-radius: 11px;
+ border-radius: 11px;
+ color: white;
+ font-size: 17px;
+ text-decoration: none;
+ vertical-align: middle;
+}
+.button:hover {
+ border-top-color: #f5f5f5;
+ background: #747474;
+ color: $orange;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+ -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+ box-shadow: rgba(0,0,0,1) 0 1px 0;
+}
+.button:active {
+ border-top-color: #ffffff;
+ background: #ffffff;
+}
+
+#testemonial {
+  text-align: left;
+  // background-color: #F9F9F9;
+  margin: 1%;
+  .block {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    .photo {
+      float: left;
+      width: 20%;
+      display: block;
+      text-align: center;
+    }
+    .blockquote {
+      float: left;
+      width: 80%;
+      p {
+        margin-left: 20px;
+      }
+      small {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.row {
+  height: 200px;
+  .flavor {
+    width: 25%;
+    float: left;
+    div {
+      margin: 10px;
+      height: 200px;
+      border:5px solid gray;      
+    }
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      margin-left: 5%;
+      font-size: 15px;
+      margin-right: 5%;
+    }
+  }
+
+  .pudding-cup {
+    width: 25%;
+    float: left;
+    text-align: center;
+    img {
+      height: 200px;
+      width: auto;
+    }
+  }
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 480px) {
+
+  .header {
+    .logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #center {
+    width: 100%;
+    padding: 0em;
+  }
+
+  .button {
+    padding: 5.5px 13px;
+    font-size: 15px;
+  }
+
+  #testemonial {
+    .block {
+      margin-left: 0px;
+      margin-right: 0px;
+      .photo {
+        display: none;
+      }
+      .blockquote {
+        width: 100%;
+      }
+    }
+  }
+}
+

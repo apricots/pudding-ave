@@ -8,7 +8,7 @@
 	<title>pudding ave.</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/hi.js"></script>
-<!-- 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/pagination/jquery.simplePagination.js"></script>
 	<link type="text/css" rel="stylesheet" href="js/pagination/simplePagination.css"/>
@@ -40,93 +40,36 @@
    </div>
   </div> 
 
-	<!-- Header -->
-	<div class="header welcome">
-		<img src="images/logo3.png" class="logo">
-		<p>
-			<a class="button" role="button" href="#theOrder">Place an Order</a>
-		</p>
+	<!-- My Jumbotron -->
+	<div class="jumbotron welcome" id="topthing">
+	<img src="images/logo3.png" id="my_image">
+	<br><br>
+	<p><a class="btn btn-warning btn-lg" role="button" href="#theOrder">Place an Order</a></p>
 	</div>
 
 <!-- Testemonial -->
-	<div id="testemonial">
-		<div class="block">
-			<div class="photo">
-				<img src="images/100x100.gif"/>
-			</div>
-			<div class="blockquote">
-				<p>
-					My friend and I were passing by and decided to try out the pudding here. It was <strong>love at first bite</strong>. I have been here twice already this week and I don't even like pudding. I hate myself so much.
-				</p>
-				<small>-- Lorem Ipsum, Yelp Extraordinaire</small>
-			</div>
-			<div class='clearfix'></div>
+	<div class="row">
+		<figure class="col-md-2 col-md-offset-1">
+			<img src="images/100x100.gif" alt="Jonathan F. Doe" class="img-responsive img-circle pull-right" />
+		</figure>
+		<blockquote class="col-md-7">
+			<p>
+			My friend and I were passing by and decided to try out the pudding here. It was <strong><font color=orange>love at first bite</strong></font>. I have been here twice already this week and I don't even like pudding. I hate myself so much.
+			</p>
+			<small>Lorem Ipsum, Yelp Extraordinaire</small>
+	  	</blockquote>
   	</div>
-  </div>
-<div class="clearfix"></div>
+
 
 
 <!-- Different types of pudding-->
 
-
-<div class="row">
-	<div class="flavor strawberry">
-		<div>
-			<h4>Strawberry</h4>
-			<p>Amazing flavors from South Africa and beyond. Taste the flavor that even kings bow down to. </p>
-		</div>
+<div>
+	<div class="flavor">
 	</div>
-	<div class="flavor mint">
-		<div>
-			<h4>Mint</h4>
-			<p>Minty fresh fresh fresh! It is as minty as can be. There is something fresh about this flavor. I wonder what it is?</p>
-		</div>
-	</div>
-	<div class="pudding-cup">
-		<div>
-			<img src="images/pudding.png" class="pudding-img"/>
-		</div>
-	</div>
-	<div class="flavor hazelnut">
-		<div>
-			<h4>Hazelnut</h4>
-			<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too if you believe.</p>
-		</div>
-	</div>	
-	<div class="clearfix"></div>
 </div>
-<div class="row">
-	<div class="flavor orange">
-		<div>
-			<h4>Original Orange</h4>
-			<p>The flavor that started it all. Tried and true, our original flavor never fails to disappoint. Get a pint of this for the best gift that everyone will love!</p>
-		</div>
-	</div>
-	<div class="flavor berry">
-		<div>
-			<h4>Mixed Berry</h4>
-			<p>Blueberries, raspberries, cranberries, oh my! Our pudding is packed with berry flavor. Good thing you love berries ;)
-		</div>
-	</div>
-	<div class="flavor banana">
-		<div>
-			<h4>Banana</h4>
-			<p>Our scientists have done it again! We are bananas for this new flavor, and we think you will be too! No peeling necessary.</p>
-		</div>
-	</div>
-	<div class="flavor cream">
-		<div>
-			<h4>Cream</h4>
-			<p>Creamy and dreamy are two adjectives that describe this flavor. The first time we tried this flavor, we thought we had died and gone to heaven.</p>
-		</div>
-	</div>	
-	<div class="clearfix"></div>
-</div>
-
-
-
 <!-- PAGE one -->
-<!-- <div id="flavors1">
+<div id="flavors1">
 <div class="boxed chocolate" data-price="1">
 	<h4 class="boxTitle">Chocolate</h4>
 	<p>This chocolate pudding is amazing. It is our most popular flavor. Organic and 80% fat free!</p>
@@ -181,10 +124,10 @@
 	
 	<p class="blah">
 		Boudin shank ham hock beef, jowl brisket pork loin jerky kielbasa spare ribs andouille cow flank ground round. Jowl bacon chuck speck, swine kielbasa short loin tenderloin sausage. Pork chop short loin swine, cow tri-tip kielbasa capicola. Chicken bresaola pork chop drumstick chuck, sausage short ribs flank sirloin hamburger. Cow frankfurter chicken prosciutto sirloin ball tip, tail beef strip steak swine. Speck sirloin turducken pancetta short loin tenderloin.
-	</p> -->
+	</p>
 
 <!-- ORDER FORM -->
-<!-- 
+
 	<h1 class="orderTitle"> pudding cart </h1>
 	<tbody>
 		<table class="table table-hover" id="theOrder">     
@@ -212,7 +155,7 @@
 			<td class="price">10</td> 
 		</tr>
 </table></tbody>
- -->
+
 <!-- ABOUT -->
   <div id="example"></div>
 
