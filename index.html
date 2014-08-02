@@ -134,6 +134,11 @@
 						<div class="clearfix"></div>
 					</div>
 				</div>
+				<div ng-if="cart.length > 0">
+					<hr class="divider">
+					<span class="cart-total-text no-margin">Total:</span>
+					<span class="cart-total no-margin">{{ total | currency}}</span>
+				</div>
 
 			</div>
 		</div>	

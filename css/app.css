@@ -210,8 +210,20 @@ img.hide1 {
   float: right;
   margin-right: 10px;
 }
+/* line 189, ../sass/app.scss */
+.row .cart .cart-total-text {
+  text-align: left;
+  float: left;
+  margin-left: 10px;
+}
+/* line 194, ../sass/app.scss */
+.row .cart .cart-total {
+  text-align: right;
+  float: right;
+  margin-right: 10px;
+}
 
-/* line 192, ../sass/app.scss */
+/* line 202, ../sass/app.scss */
 .footer {
   text-align: center;
   background-color: #F5F5F5;
@@ -221,34 +233,34 @@ img.hide1 {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 480px) {
-  /* line 209, ../sass/app.scss */
+  /* line 219, ../sass/app.scss */
   .header .logo {
     width: 100%;
     height: auto;
   }
 
-  /* line 215, ../sass/app.scss */
+  /* line 225, ../sass/app.scss */
   #center {
     width: 100%;
     padding: 0em;
   }
 
-  /* line 220, ../sass/app.scss */
+  /* line 230, ../sass/app.scss */
   .button {
     padding: 5.5px 13px;
     font-size: 15px;
   }
 
-  /* line 226, ../sass/app.scss */
+  /* line 236, ../sass/app.scss */
   #testemonial .block {
     margin-left: 0px;
     margin-right: 0px;
   }
-  /* line 229, ../sass/app.scss */
+  /* line 239, ../sass/app.scss */
   #testemonial .block .photo {
     display: none;
   }
-  /* line 232, ../sass/app.scss */
+  /* line 242, ../sass/app.scss */
   #testemonial .block .blockquote {
     width: 100%;
   }
