@@ -23,7 +23,7 @@ $(document).ready(function() {
   // });
   $(".flavor-click").click(function(event) {
     $(this).toggleClass("flavor-active");
-    $(this).find('.gimme').css('visibility', 'visible');
+    $(this).find('.gimme').css('visibility', $(this).hasClass('flavor-active') ? 'visible' : 'hidden');
   });
 
   // $(".flavor1").click(function(event) {
