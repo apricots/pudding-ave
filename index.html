@@ -47,7 +47,7 @@
 	<div class="header welcome">
 		<img src="images/logo3.png" class="logo">
 		<p>
-			<a class="button" role="button" href="#theOrder">Place an Order</a>
+			<a class="button" role="button" href="#pudding-order">Place an Order</a>
 		</p>
 	</div>
 
@@ -71,19 +71,19 @@
 
 <!-- Different types of pudding-->
 
-<div ng-controller="FlavorCtrl as flavors">
+<div ng-controller="FlavorCtrl as flavors" id="pudding-order">
 	<div class="row">
 		<div class="flavor strawberry">
 			<div ng-click="cart.addRemove('Strawberry');" class="flavor-click">
 				<h4>Strawberry</h4>
-				<p>Amazing flavors from South Africa and beyond. Taste the flavor that even kings bow down to. </p>
+				<p>Amazing flavors from South Africa and beyond. Definitely not gluten-free but you can make an exception.</p>
 				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
 		<div class="flavor mint">
 			<div ng-click="cart.addRemove('Mint');" class="flavor-click">
 				<h4>Mint</h4>
-				<p>Minty fresh fresh fresh! It is as minty as can be. There is something fresh about this flavor. I wonder what it is?</p>
+				<p>Minty fresh fresh fresh! It is as minty as can be and definitely worth the extra 30 minutes on the treadmill come Monday.</p>
 				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 		<div class="flavor hazelnut">
 			<div ng-click="cart.addRemove('Hazelnut');" class="flavor-click">
 				<h4>Hazelnut</h4>
-				<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too if you believe.</p>
+				<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too.. if you believe.</p>
 				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>	
@@ -105,22 +105,22 @@
 		<div class="flavor orange">
 			<div ng-click="cart.addRemove('Orange');" class="flavor-click">
 				<h4>Original Orange</h4>
-				<p>Tried and true, our original flavor never fails to disappoint. Get a pint of this for the best gift that everyone will love!</p>
+				<p>The Orange that started it all. Don't know what to get for your childhood friend's wedding gift? This will do.</p>
 				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 				</div>
 		</div>
 		<div class="flavor berry">
 			<div ng-click="cart.addRemove('Berry');" class="flavor-click">
 				<h4>Mixed Berry</h4>
-				<p>Blueberries, raspberries, cranberries, oh my! Our pudding is packed with berry flavor. Good thing you love berries ;)</p>
+				<p>Blueberries, raspberries, cranberries, oh my! Our pudding is berry jam packed. Watch out for all that flavor!</p>
 				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
 		<div class="flavor banana">
 			<div ng-click="cart.addRemove('Banana');" class="flavor-click">
 				<h4>Banana</h4>
-				<p>Our scientists have done it again! We are bananas for this new flavor, and we think you will be too! No peeling necessary.</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span><br><span class="removal" ng-click="cart.remove('Banana');">REMOVE</span></p>
+				<p>We are bananas for this flavor, and we think you will be too! How did our scientists come up with something so a-peel-ing?!</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span><br></p>
 			</div>
 		</div>
 		<div class="cart">
@@ -129,7 +129,7 @@
 <!-- 				<p>{{cart}}</p> -->
 				<div ng-repeat="flavor in cart track by $index">
 					<div>
-						<span class="flavor-name no-margin">{{flavor.name}} x <input type="text" name="{{flavor.name}}" size="3" ng-model="flavor.quantity"></span>
+						<span class="flavor-name no-margin">{{flavor.name}} x <input type="text" name="{{flavor.name}}" size="1" ng-model="flavor.quantity"></span>
 						<span class="flavor-price no-margin">{{flavor.price * flavor.quantity | currency }}</span>
 						<div class="clearfix"></div>
 					</div>
@@ -138,6 +138,7 @@
 					<hr class="divider">
 					<span class="cart-total-text no-margin">Total:</span>
 					<span class="cart-total no-margin">{{ total | currency}}</span>
+					<div class='clearfix'></div>
 				</div>
 
 			</div>
@@ -241,7 +242,7 @@
 	<!-- My Jumbotron -->
 	<div class="footer" id="about">
 	<h2 class="puddinghi">About Us</h2>
-	<p>Nisha had always dreamed about opening a pudding shop in New York City. Finally, her dream came true. {{hi}}<span class="glyphicon glyphicon-heart-empty"></span></p>
+	<p>Nisha had always dreamed about opening a pudding shop in New York City, the concrete jungle where dreams are made of. </p><p>Finally, her dream came true. Thanks to you and your pudding funds.<span class="glyphicon glyphicon-heart-empty"></span></p>
 	</div>
 
 <div id="aboutUs">
