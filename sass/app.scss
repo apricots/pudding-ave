@@ -49,9 +49,8 @@ img.hide1{
   display:none;
 }
 
-.flavor2{
-  display:none;
-}
+
+
 
 
 .button {
@@ -116,6 +115,11 @@ img.hide1{
   clear: both;
 }
 
+.flavor-active {
+  background-color: white !important;
+  border-color: $orange !important;
+}
+
 .row {
   height: 200px;
   .flavor {
@@ -124,8 +128,10 @@ img.hide1{
     div {
       margin: 10px;
       height: 200px;
-      border:5px solid gray;      
+      border:5px solid white;
+      background-color: #E6E6E6;
     }
+
     h4 {
       text-align: center;
       text-transform: uppercase;
@@ -135,7 +141,15 @@ img.hide1{
       font-size: 15px;
       margin-right: 5%;
     }
+    .gimme {
+      text-align: center;
+      visibility: hidden;
+    }
+    .gimme-highlight {
+      background-color: #E6E6E6;
+    }
   }
+
 
   .pudding-cup {
     width: 25%;
@@ -150,8 +164,9 @@ img.hide1{
   .cart {
     width: 25%;
     float: left;
-    text-align: center;
-    div {
+    margin: none;
+    overflow: auto;
+    .box {
       margin: 10px;
       height: 200px;
       border:2px dashed $orange;  
@@ -160,6 +175,16 @@ img.hide1{
     h4 {
       text-align: left;
       margin-left: 10px;
+    }
+    .flavor-name {
+      text-align: left;
+      float: left;
+      margin-left: 10px;
+    }
+    .flavor-price {
+      text-align: right;
+      float: right;
+      margin-right: 10px;
     }
   }
 }
@@ -170,6 +195,13 @@ img.hide1{
   margin: 1%;
   padding: 15px;
 }
+
+
+
+
+
+
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 480px) {
 

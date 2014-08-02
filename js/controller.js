@@ -3,7 +3,7 @@ var puddingApp = angular.module('puddingApp',[]);
 var inventory = [
   {
     'name': 'Strawberry',
-    'price': 5
+    'price': 4.5,
   },
   {
     'name': 'Mint',
@@ -11,37 +11,48 @@ var inventory = [
   },
   {
     'name': 'Hazelnut',
-    'price': 5
+    'price': 4,
   },
   {
     'name': 'Orange',
-    'price': 5
+    'price': 3.5,
   },
   {
     'name': 'Berry',
-    'price': 5
+    'price': 3.5,
   },
   {
     'name': 'Banana',
-    'price': 5
+    'price': 4,
   }
 ];
 
 puddingApp.controller('FlavorCtrl', function($scope) {
   $scope.cart = [];
   $scope.cart.add = function(flavor) {
-    alert(flavor);
-    // console.log(inventory[0]);
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < $scope.cart.length; i++) {
+      if($scope.cart[i].name == flavor) {
+        $scope.cart.splice(i,1);
+        return;
+      }
+    }
+    for (var i = 0; i < inventory.length; i++) {
       if(inventory[i].name == flavor) {
         console.log(inventory[i]);
         $scope.cart.push(inventory[i]);
-        return 0;
+        return;
       }
-      else {
-        alert("There was an error.");
-      }
+      // else {
+      //   alert("There was an error.");
+      // }
     }
 
   }
+  // $scope.cart.remove = function(flavor) {
+  //   for (var i = 0; i < $scope.cart.length; i++) {
+  //     if($scope.cart[i].name == flavor) {
+  //       $scope.cart.splice(i,1);
+  //     }
+  //   }
+  // }
 });

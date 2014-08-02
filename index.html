@@ -8,7 +8,7 @@
 	<title>pudding ave.</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/hi.js"></script>
-
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <!-- 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
 
 	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
@@ -74,15 +74,17 @@
 <div ng-controller="FlavorCtrl as flavors">
 	<div class="row">
 		<div class="flavor strawberry">
-			<div ng-click="cart.add('Strawberry');">
+			<div ng-click="cart.add('Strawberry');" class="flavor-click">
 				<h4>Strawberry</h4>
-				<p>Amazing flavors from South Africa and beyond. Taste the flavor that even kings bow down to. </p>{{1+1}}
+				<p>Amazing flavors from South Africa and beyond. Taste the flavor that even kings bow down to. </p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
 		<div class="flavor mint">
-			<div>
+			<div ng-click="cart.add('Mint');" class="flavor-click">
 				<h4>Mint</h4>
 				<p>Minty fresh fresh fresh! It is as minty as can be. There is something fresh about this flavor. I wonder what it is?</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
 		<div class="pudding-cup">
@@ -91,39 +93,48 @@
 			</div>
 		</div>
 		<div class="flavor hazelnut">
-			<div>
+			<div ng-click="cart.add('Hazelnut');" class="flavor-click">
 				<h4>Hazelnut</h4>
 				<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too if you believe.</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>	
 		<div class="clearfix"></div>
 	</div>
 	<div class="row">
 		<div class="flavor orange">
-			<div>
+			<div ng-click="cart.add('Orange');" class="flavor-click">
 				<h4>Original Orange</h4>
-				<p>The flavor that started it all. Tried and true, our original flavor never fails to disappoint. Get a pint of this for the best gift that everyone will love!</p>
-			</div>
+				<p>Tried and true, our original flavor never fails to disappoint. Get a pint of this for the best gift that everyone will love!</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+				</div>
 		</div>
 		<div class="flavor berry">
-			<div>
+			<div ng-click="cart.add('Berry');" class="flavor-click">
 				<h4>Mixed Berry</h4>
-				<p>Blueberries, raspberries, cranberries, oh my! Our pudding is packed with berry flavor. Good thing you love berries ;)
+				<p>Blueberries, raspberries, cranberries, oh my! Our pudding is packed with berry flavor. Good thing you love berries ;)</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
 		</div>
 		<div class="flavor banana">
-			<div>
+			<div ng-click="cart.add('Banana');" class="flavor-click">
 				<h4>Banana</h4>
 				<p>Our scientists have done it again! We are bananas for this new flavor, and we think you will be too! No peeling necessary.</p>
+				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span><br><span class="removal" ng-click="cart.remove('Banana');">REMOVE</span></p>
 			</div>
 		</div>
 		<div class="cart">
-			<div>
+			<div class='box'>
 				<h4>Pudding Cart</h4>
-				<p>{{cart}}</p>
-				<p ng-repeat="flavor in cart">
-					{{flavor.name}}
-				</p>
+<!-- 				<p>{{cart}}</p> -->
+				<div ng-repeat="flavor in cart track by $index">
+					<div>
+						<span class="flavor-name no-margin">{{flavor.name}}</span>
+						<span class="flavor-price no-margin">{{flavor.price | currency }}</span>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
 			</div>
 		</div>	
 		<div class="clearfix"></div>

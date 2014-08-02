@@ -21,6 +21,17 @@ $(document).ready(function() {
   // $(".flavor").click(function(event) {
   //   $('.pudding-img').attr('src', 'images/flavor-strawberry.png');
   // });
+  $(".flavor-click").click(function(event) {
+    $(this).toggleClass("flavor-active");
+    $(this).find('.gimme').css('visibility', 'visible');
+  });
+
+  // $(".flavor1").click(function(event) {
+  //   $(this).css("background-color", "white");
+  //   $(this).css("border-color", "#FFAE19");
+  // });
+
+// makes the pudding cup different color upon mouseover
 
   $(".flavor.strawberry").on('mouseenter', function() {
     $('.pudding-img').attr('src', 'images/flavor-strawberry.png');
