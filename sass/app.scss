@@ -227,7 +227,35 @@ img.hide1{
   display:none;
 }
 
+.info {
+  .map {
+    width: 50%;
+    float: left;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .more-info {
+    width: 25%;
+    height: auto;
+    float: left;
 
+    div {
+      background-color: #F5F5F5;
+      padding: 10px;
+    }
+
+    .bold {
+      color: $orange;
+      font-weight: bold;
+    }
+  }
+  .contact-form {
+    width: 25%;
+    float: left;
+  }
+}
 
 
 
