@@ -106,3 +106,21 @@ puddingApp.controller('ExampleController', ['$scope', function($scope) {
 
   $scope.reset();
 }]);
+
+puddingApp.controller('FormCtrl', function($scope, $http) {
+
+  var contantForm = {
+    name: "default",
+    email: "default",
+    comment: "default"
+  };
+
+  $scope.save = function() {
+    contactForm = $scope.form;
+  }
+
+  $scope.submitForm = function() {
+    
+  }
+
+});

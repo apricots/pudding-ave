@@ -277,7 +277,9 @@ img.hide1{
   background-color: #78FA89;
 }
 
-
+.mobile-form {
+  display: none;
+}
 
 
 /* Smartphones (portrait) ----------- */
@@ -360,12 +362,21 @@ img.hide1{
       }
     }
     .more-info {
-      width: 50%;
+      width: 100%;
+
     }
     .contact-form {
-      width: 50%;
-      
+      width: 100%;
+      div {
+        margin-bottom: 10px;
+      }
 
+    }
+    .desktop-form {
+      display: none;
+    }
+    .mobile-form {
+      display: block;
     }
   }
 }
