@@ -286,136 +286,153 @@ img.hide1 {
 .info .contact-form div {
   margin-left: 10px;
 }
+/* line 262, ../sass/app.scss */
+.info input {
+  line-height: 2em;
+}
 
-/* line 264, ../sass/app.scss */
+/* line 267, ../sass/app.scss */
 .css-form input.ng-invalid.ng-dirty {
   background-color: #FA787E;
 }
 
-/* line 268, ../sass/app.scss */
+/* line 271, ../sass/app.scss */
 .css-form input.ng-valid.ng-dirty {
   background-color: #78FA89;
 }
 
-/* line 272, ../sass/app.scss */
+/* line 275, ../sass/app.scss */
 .css-form textarea.ng-invalid.ng-dirty {
   background-color: #FA787E;
 }
 
-/* line 276, ../sass/app.scss */
+/* line 279, ../sass/app.scss */
 .css-form textarea.ng-valid.ng-dirty {
   background-color: #78FA89;
 }
 
-/* line 280, ../sass/app.scss */
+/* line 283, ../sass/app.scss */
 .mobile-form {
   display: none;
 }
 
+/* line 287, ../sass/app.scss */
+.aboutUs {
+  margin: 10px;
+}
+
+/* line 291, ../sass/app.scss */
+.highlight {
+  font-weight: bold;
+  color: #ffae19;
+}
+
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 480px) {
-  /* line 289, ../sass/app.scss */
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  /* line 300, ../sass/app.scss */
   .header .logo {
     width: 100%;
     height: auto;
   }
 
-  /* line 295, ../sass/app.scss */
+  /* line 306, ../sass/app.scss */
   #center {
     width: 100%;
     padding: 0em;
   }
 
-  /* line 300, ../sass/app.scss */
+  /* line 311, ../sass/app.scss */
   .button {
     padding: 5.5px 13px;
     font-size: 15px;
   }
 
-  /* line 306, ../sass/app.scss */
+  /* line 317, ../sass/app.scss */
   #testemonial .block {
     margin-left: 0px;
     margin-right: 0px;
   }
-  /* line 309, ../sass/app.scss */
+  /* line 320, ../sass/app.scss */
   #testemonial .block .photo {
     display: none;
   }
-  /* line 312, ../sass/app.scss */
+  /* line 323, ../sass/app.scss */
   #testemonial .block .blockquote {
     width: 100%;
   }
 
-  /* line 318, ../sass/app.scss */
+  /* line 329, ../sass/app.scss */
   .pudding-cup {
     display: none;
   }
 
-  /* line 323, ../sass/app.scss */
+  /* line 334, ../sass/app.scss */
   .row .flavor {
     width: 100%;
     float: left;
   }
-  /* line 326, ../sass/app.scss */
+  /* line 337, ../sass/app.scss */
   .row .flavor div {
     height: 60px;
     border: 5px solid white;
     background-color: #E6E6E6;
   }
-  /* line 331, ../sass/app.scss */
+  /* line 342, ../sass/app.scss */
   .row .flavor p {
     display: none;
   }
-  /* line 335, ../sass/app.scss */
+  /* line 346, ../sass/app.scss */
   .row .cart {
     width: 100%;
     float: left;
     height: auto;
   }
 
-  /* line 343, ../sass/app.scss */
+  /* line 354, ../sass/app.scss */
   .row .cart .box {
     height: auto;
     padding-bottom: 10px;
   }
 
-  /* line 347, ../sass/app.scss */
+  /* line 358, ../sass/app.scss */
   .mobile-pudding {
     display: block;
   }
 
-  /* line 351, ../sass/app.scss */
+  /* line 362, ../sass/app.scss */
   .order-mobile {
     display: block;
   }
 
-  /* line 356, ../sass/app.scss */
+  /* line 367, ../sass/app.scss */
   .info .map {
     width: 100%;
-    float: left;
+    float: none;
   }
-  /* line 359, ../sass/app.scss */
+  /* line 370, ../sass/app.scss */
   .info .map img {
     max-height: 100%;
     max-width: 100%;
   }
-  /* line 364, ../sass/app.scss */
+  /* line 375, ../sass/app.scss */
   .info .more-info {
     width: 100%;
+    float: none;
   }
-  /* line 368, ../sass/app.scss */
+  /* line 379, ../sass/app.scss */
   .info .contact-form {
     width: 100%;
+    float: none;
   }
-  /* line 370, ../sass/app.scss */
+  /* line 382, ../sass/app.scss */
   .info .contact-form div {
     margin-bottom: 10px;
   }
-  /* line 375, ../sass/app.scss */
+  /* line 387, ../sass/app.scss */
   .info .desktop-form {
     display: none;
   }
-  /* line 378, ../sass/app.scss */
+  /* line 390, ../sass/app.scss */
   .info .mobile-form {
     display: block;
   }

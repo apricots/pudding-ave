@@ -259,6 +259,9 @@ img.hide1{
 
     }
   }
+  input {
+    line-height: 2em;
+  }
 }
 
 .css-form input.ng-invalid.ng-dirty {
@@ -281,9 +284,17 @@ img.hide1{
   display: none;
 }
 
+.aboutUs {
+  margin :10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: $orange;
+}
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 480px) and (min-width : 320px) {
 
   .header {
     .logo {
@@ -355,7 +366,7 @@ img.hide1{
   .info {
     .map {
       width: 100%;
-      float: left;
+      float: none;
       img {
         max-height: 100%;
         max-width: 100%;
@@ -363,10 +374,11 @@ img.hide1{
     }
     .more-info {
       width: 100%;
-
+      float: none;
     }
     .contact-form {
       width: 100%;
+      float: none;
       div {
         margin-bottom: 10px;
       }
