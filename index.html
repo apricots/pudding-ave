@@ -276,13 +276,28 @@
 			<p class="bold">Phone:</p>
 			<p>(718) 223-2345</p>
 			<p class="bold">Hours: </p>
-			<p>Mon to Thurs 9:00 - 18:00 <br> Fri to Sun 9:00 - 20:00</p>
+			<p>Monday to Thursday 9:00 - 18:00 <br> Friday to Sunday 9:00 - 20:00</p>
 			<p class="bold">Trains:</p>
-			<p>A, C, E, </p>
+			<p><img src='images/trains.png'/></p>
 		</div>
 	</div>
 	<div class='contact-form'>
-		YESS!
+		<div>
+			<p>Question, Comments, Concerns?</p>
+			<p>We're here to help.</p>
+<div ng-controller="ExampleController">
+  <form novalidate class="css-form">
+    Name:
+      <input type="text" ng-model="user.name" required /><br />
+    E-mail: <input type="email" ng-model="user.email" required /><br />
+    Comments:
+      <textarea rows="4" cols="18" ng-model"user.comment" required></textarea><br />
+    <button ng-click="reset()">Reset</button>
+    <button ng-click="update(user)">Send</button>
+  </form>
+</div>
+
+		</div>
 	</div>
 	<div class='clearfix'></div>
 </div>

@@ -254,8 +254,29 @@ img.hide1{
   .contact-form {
     width: 25%;
     float: left;
+    div {
+      margin-left: 10px;
+
+    }
   }
 }
+
+.css-form input.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-dirty {
+  background-color: #78FA89;
+}
+
+.css-form textarea.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+
+.css-form textarea.ng-valid.ng-dirty {
+  background-color: #78FA89;
+}
+
 
 
 
@@ -329,5 +350,24 @@ img.hide1{
     display: block;
   }
 
+  .info {
+    .map {
+      width: 100%;
+      float: left;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .more-info {
+      width: 50%;
+    }
+    .contact-form {
+      width: 50%;
+      
+
+    }
+  }
 }
+
 
