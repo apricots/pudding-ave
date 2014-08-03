@@ -17,18 +17,16 @@
 </head>
 
 <body class="bg">
-	<div>
-		<div id="center">
+<div>
+<div id="center">
 
 	<!-- Header -->
 	<div class="header welcome">
 		<img src="images/logo3.png" class="logo">
-		<p>
-			<a class="button" role="button" href="#pudding-order">Place an Order</a>
-		</p>
+		<p><a class="button" role="button" href="#pudding-order">Place an Order</a></p>
 	</div>
 
-<!-- Testemonial -->
+	<!-- Testemonial -->
 	<div id="testemonial">
 		<div class="block">
 			<div class="photo">
@@ -43,169 +41,175 @@
 			<div class='clearfix'></div>
   	</div>
   </div>
-<div class="clearfix"></div>
+	<div class="clearfix"></div>
 
 
-<!-- Different types of pudding-->
+<!-- Pudding Flavors-->
 
-<div ng-controller="FlavorCtrl as flavors" id="pudding-order">
-	<div class="mobile-pudding">
-		<div>
-			<img src="images/flavor-banana.png" height="100" width="100"/><img src="images/flavor-berry.png" height="100" width="100"/><img src="images/flavor-strawberry.png" height="100" width="100"/>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="flavor strawberry">
-			<div ng-click="cart.addRemove('Strawberry');" class="flavor-click">
-				<h4>Strawberry</h4>
-				<p>Amazing flavors from South Africa and beyond. Definitely not gluten-free but you can make an exception.</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
-			</div>
-		</div>
-		<div class="flavor mint">
-			<div ng-click="cart.addRemove('Mint');" class="flavor-click">
-				<h4>Mint</h4>
-				<p>Minty fresh fresh fresh! It is as minty as can be and definitely worth the extra 30 minutes on the treadmill come Monday.</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
-			</div>
-		</div>
-		<div class="pudding-cup">
+	<div ng-controller="FlavorCtrl as flavors" id="pudding-order">
+		<div class="mobile-pudding">
 			<div>
-				<img src="images/pudding.png" class="pudding-img"/>
+				<img src="images/flavor-banana.png" height="100" width="100"/><img src="images/flavor-berry.png" height="100" width="100"/><img src="images/flavor-strawberry.png" height="100" width="100"/>
 			</div>
 		</div>
-		<div class="flavor hazelnut">
-			<div ng-click="cart.addRemove('Hazelnut');" class="flavor-click">
-				<h4>Hazelnut</h4>
-				<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too.. if you believe.</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
-			</div>
-		</div>	
-		<div class="clearfix"></div>
-	</div>
 
-	<div class="row">
-		<div class="flavor orange">
-			<div ng-click="cart.addRemove('Orange');" class="flavor-click">
-				<h4>Original Orange</h4>
-				<p>The Orange that started it all. Don't know what to get for your childhood friend's wedding gift? This will do.</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+		<div class="row">
+			<div class="flavor strawberry">
+				<div ng-click="cart.addRemove('Strawberry');" class="flavor-click">
+					<h4>Strawberry</h4>
+					<p>Amazing flavors from South Africa and beyond. Definitely not gluten-free but you can make an exception.</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 				</div>
-		</div>
-		<div class="flavor berry">
-			<div ng-click="cart.addRemove('Berry');" class="flavor-click">
-				<h4>Mixed Berry</h4>
-				<p>Blueberries, raspberries, cranberries, oh my! Our pudding is berry jam packed. Watch out for all that flavor!</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
 			</div>
-		</div>
-		<div class="flavor banana">
-			<div ng-click="cart.addRemove('Banana');" class="flavor-click">
-				<h4>Banana</h4>
-				<p>We are bananas for this flavor, and we think you will be too! How did our scientists come up with something so a-peel-ing?!</p>
-				<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span><br></p>
+			<div class="flavor mint">
+				<div ng-click="cart.addRemove('Mint');" class="flavor-click">
+					<h4>Mint</h4>
+					<p>Minty fresh fresh fresh! It is as minty as can be and definitely worth the extra 30 minutes on the treadmill come Monday.</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+				</div>
 			</div>
+			<div class="pudding-cup">
+				<div>
+					<img src="images/pudding.png" class="pudding-img"/>
+				</div>
+			</div>
+			<div class="flavor hazelnut">
+				<div ng-click="cart.addRemove('Hazelnut');" class="flavor-click">
+					<h4>Hazelnut</h4>
+					<p>Our hazelnut is better than your hazelnut. This is Hailin's favorite flavor. It can be yours too.. if you believe.</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+				</div>
+			</div>	
+			<div class="clearfix"></div>
 		</div>
-		<div class="cart">
-			<div class='box'>
-				<h4>Pudding Cart</h4>
-				<div ng-repeat="flavor in cart track by $index">
-					<div>
-						<span class="flavor-name no-margin">{{flavor.name}} x <input type="text" name="{{flavor.name}}" size="1" ng-model="flavor.quantity"></span>
-						<span class="flavor-price no-margin">{{flavor.price * flavor.quantity | currency }}</span>
-						<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="flavor orange">
+				<div ng-click="cart.addRemove('Orange');" class="flavor-click">
+					<h4>Original Orange</h4>
+					<p>The Orange that started it all. Don't know what to get for your childhood friend's wedding gift? This will do.</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+				</div>
+			</div>
+			<div class="flavor berry">
+				<div ng-click="cart.addRemove('Berry');" class="flavor-click">
+					<h4>Mixed Berry</h4>
+					<p>Blueberries, raspberries, cranberries, oh my! Our pudding is berry jam packed. Watch out for all that flavor!</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span></p>
+				</div>
+			</div>
+			<div class="flavor banana">
+				<div ng-click="cart.addRemove('Banana');" class="flavor-click">
+					<h4>Banana</h4>
+					<p>We are bananas for this flavor, and we think you will be too! How did our scientists come up with something so a-peel-ing?!</p>
+					<p class="gimme"><span class="gimme-highlight"><i class="fa fa-shopping-cart"></i> added to cart</span><br></p>
+				</div>
+			</div>
+			<div class="cart">
+				<div class='box'>
+					<h4>Pudding Cart</h4>
+					<div ng-repeat="flavor in cart track by $index">
+						<div>
+							<span class="flavor-name no-margin">{{flavor.name}} x <input type="text" name="{{flavor.name}}" size="1" ng-model="flavor.quantity"></span>
+							<span class="flavor-price no-margin">{{flavor.price * flavor.quantity | currency }}</span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div ng-if="cart.length > 0">
+						<hr class="divider">
+						<span class="cart-total-text no-margin">Total:</span>
+						<span class="cart-total no-margin">{{ total() | currency}}</span>
+						<div class='clearfix'></div>
+					</div>
+					<div ng-if="cart.length === 0">
+						<center>no pudding yet <i class="fa fa-frown-o"></i></center>
 					</div>
 				</div>
-				<div ng-if="cart.length > 0">
-					<hr class="divider">
-					<span class="cart-total-text no-margin">Total:</span>
-					<span class="cart-total no-margin">{{ total() | currency}}</span>
-					<div class='clearfix'></div>
-				</div>
-				<div ng-if="cart.length === 0">
-					<center>no pudding yet <i class="fa fa-frown-o"></i></center>
-				</div>
-
-			</div>
-		</div>	
-		<div class="clearfix"></div>
-	</div>
-	<div class="clearfix"></div>
-		<div class="mobile-pudding">
-		<div>
-			<img src="images/flavor-orange.png" height="100" width="100"/><img src="images/flavor-mint.png" height="100" width="100"/><img src="images/flavor-hazelnut.png" height="100" width="100"/>
+			</div>	
+			<div class="clearfix"></div>
 		</div>
+		<div class="clearfix"></div>
+
+		<div class="mobile-pudding">
+			<div>
+				<img src="images/flavor-orange.png" height="100" width="100"/><img src="images/flavor-mint.png" height="100" width="100"/><img src="images/flavor-hazelnut.png" height="100" width="100"/>
+			</div>
+		</div>
+
 	</div>
-</div>
 
 <!-- ABOUT -->
-  <div id="example"></div>
 
 	<div class="footer" id="about">
-	<h2 class="puddinghi">About Us</h2>
-	<p>Nisha had always dreamt of opening a pudding shop. Thanks to you and other pudding lovers, her dream has come true. <i class="fa fa-heart-o"></i></p>
+		<h2 class="puddinghi">About Us</h2>
+		<p>
+			Nisha had always dreamt of opening a pudding shop. Thanks to you and other pudding lovers, her dream has come true. <i class="fa fa-heart-o"></i>
+		</p>
 	</div>
 
-<div class="aboutUs">
-<p>
-	Our pudding is made fresh daily in our secret pudding laboratory located beneath the streets of lovely Greenwich Village. We take great pride in concocting our delectable desserts from <span class="highlight">high quality, fair trade and organic</span> ingredients, not that you expected anything less. Our grass-fed cows provide the signature creamy and rich taste that you have come to crave. No dyes, no preservatives - just natural, handcrafted pudding.
-</p>
-</div>
+	<div class="aboutUs">
+		<p>
+			Our pudding is made fresh daily in our secret pudding laboratory located beneath the streets of lovely Greenwich Village. We take great pride in concocting our delectable desserts from <span class="highlight">high quality, fair trade and organic</span> ingredients, not that you expected anything less. Our grass-fed cows provide the signature creamy and rich taste that you have come to crave. No dyes, no preservatives - just natural, handcrafted pudding.
+		</p>
+	</div>
 
-<div class='info'>
-	<div class='map'>
-		<img src="images/map.png"/>
-	</div>
-	<div class='more-info'>
-		<div>
-			<p class="bold">Phone:</p>
-			<p>(718) 223-2345</p>
-			<p class="bold">Hours: </p>
-			<p>Monday to Thursday | 9:00 - 18:00 <br> Friday to Sunday | 9:00 - 20:00</p>
-			<p class="bold">Getting Here:</p>
-			<p><img src='images/trains.png'/> W 4th St.<br><img src="images/trains2.png"> Christopher St.</p>
+	<div class='info'>
+
+		<div class='map'>
+			<img src="images/map.png"/>
 		</div>
-	</div>
-	<div class='contact-form'>
-		<div>
-			<p>Question, Comments, Concerns?
-			<br>Tell us your favorite flavor. Talk dirty to us.</p>
-<div ng-controller="ExampleController" class="desktop-form">
-  <form novalidate class="css-form">
-    Name:
-      <input type="text" ng-model="user.name" size="27"required /><br />
-    E-mail: <input type="email" ng-model="user.email" size="27" required /><br />
-    Comments:
-      <textarea rows="5" cols="25" ng-model"user.comment" required></textarea><br />
-    <button ng-click="reset()">Reset</button>
-    <button ng-click="update(user)">Send</button>
-  </form>
-</div>
-<div ng-controller="ExampleController" class="mobile-form">
-  <form novalidate class="css-form">
-    Name:<br>
-      <input type="text" ng-model="user.name" size="55" required /><br />
-    E-mail: <br><input type="email" ng-model="user.email" size="55" required /><br />
-    Comments:<br>
-      <textarea rows="5" cols="40" ng-model"user.comment" required></textarea><br />
-    <button ng-click="reset()">Reset</button>
-    <button ng-click="update(user)">Send</button>
-  </form>
-</div>
+
+		<div class='more-info'>
+			<div>
+				<p class="bold">Phone:</p>
+				<p>(718) 223-2345</p>
+				<p class="bold">Hours: </p>
+				<p>Monday to Thursday | 9:00 - 18:00 <br> Friday to Sunday | 9:00 - 20:00</p>
+				<p class="bold">Getting Here:</p>
+				<p><img src='images/trains.png'/> W 4th St.<br><img src="images/trains2.png"> Christopher St.</p>
+			</div>
 		</div>
+
+		<div class='contact-form'>
+			<div>
+				<p>Question, Comments, Concerns?
+				<br>Tell us your favorite flavor. Talk dirty to us.</p>
+				<!-- Desktop Version -->
+				<div ng-controller="ExampleController" class="desktop-form">
+				  <form novalidate class="css-form">
+				    Name:
+				      <input type="text" ng-model="user.name" size="27"required /><br />
+				    E-mail: <input type="email" ng-model="user.email" size="27" required /><br />
+				    Comments:
+				      <textarea rows="5" cols="25" ng-model"user.comment" required></textarea><br />
+				    <button ng-click="reset()">Reset</button>
+				    <button ng-click="update(user)">Send</button>
+				  </form>
+				</div>
+				<!-- Mobile Version -->
+				<div ng-controller="ExampleController" class="mobile-form">
+				  <form novalidate class="css-form">
+				    Name:<br>
+				      <input type="text" ng-model="user.name" size="55" required /><br />
+				    E-mail: <br><input type="email" ng-model="user.email" size="55" required /><br />
+				    Comments:<br>
+				      <textarea rows="5" cols="40" ng-model"user.comment" required></textarea><br />
+				    <button ng-click="reset()">Reset</button>
+				    <button ng-click="update(user)">Send</button>
+				  </form>
+				</div>
+			</div>
+		</div>
+		<div class='clearfix'></div>
+
 	</div>
-	<div class='clearfix'></div>
-</div>
 
 	
 
 
   
 </div>  
-
-		</div>
-	</div>
+</div>
 
 
 
