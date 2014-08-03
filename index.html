@@ -68,10 +68,18 @@
   </div>
 <div class="clearfix"></div>
 
+<!-- <div class="order-mobile">
+<span class="order-back-mobile"><i class="fa fa-shopping-cart"></i> Place an Order Below</span>
+</div> -->
 
 <!-- Different types of pudding-->
 
 <div ng-controller="FlavorCtrl as flavors" id="pudding-order">
+	<div class="mobile-pudding">
+		<div>
+			<img src="images/flavor-banana.png" height="120" width="120"/><img src="images/flavor-berry.png" height="120" width="120"/><img src="images/flavor-strawberry.png" height="120" width="120"/>
+		</div>
+	</div>
 	<div class="row">
 		<div class="flavor strawberry">
 			<div ng-click="cart.addRemove('Strawberry');" class="flavor-click">
@@ -101,6 +109,7 @@
 		</div>	
 		<div class="clearfix"></div>
 	</div>
+
 	<div class="row">
 		<div class="flavor orange">
 			<div ng-click="cart.addRemove('Orange');" class="flavor-click">
@@ -125,7 +134,7 @@
 		</div>
 		<div class="cart">
 			<div class='box'>
-				<h4>Pudding Cart</h4>
+				<h4>Your Pudding Cart</h4>
 <!-- 				<p>{{cart}}</p> -->
 				<div ng-repeat="flavor in cart track by $index">
 					<div>
@@ -137,8 +146,11 @@
 				<div ng-if="cart.length > 0">
 					<hr class="divider">
 					<span class="cart-total-text no-margin">Total:</span>
-					<span class="cart-total no-margin">{{ total | currency}}</span>
+					<span class="cart-total no-margin">{{ total() | currency}}</span>
 					<div class='clearfix'></div>
+				</div>
+				<div ng-if="cart.length === 0">
+					<center>no pudding yet <i class="fa fa-frown-o"></i></center>
 				</div>
 
 			</div>
@@ -146,6 +158,11 @@
 		<div class="clearfix"></div>
 	</div>
 	<div class="clearfix"></div>
+		<div class="mobile-pudding">
+		<div>
+			<img src="images/flavor-orange.png" height="120" width="120"/><img src="images/flavor-mint.png" height="120" width="120"/><img src="images/flavor-hazelnut.png" height="120" width="120"/>
+		</div>
+	</div>
 </div>
 
 <!-- PAGE one -->

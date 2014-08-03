@@ -77,7 +77,7 @@ puddingApp.controller('FlavorCtrl', function($scope) {
   // }
 
 
-  function total() {
+  $scope.total = function() {
     var total = 0;
     for (var i = 0; i < $scope.cart.length; i++) {
       var add = $scope.cart[i].price * $scope.cart[i].quantity;
@@ -86,40 +86,10 @@ puddingApp.controller('FlavorCtrl', function($scope) {
     return total;
   }
 
-  $scope.$watchCollection("cart", function() {
-    $scope.total = total();
-  });
+  // $scope.$watchCollection("cart", function() {
+  //   $scope.total = total();
+  // });
 
 
 });
 
-
-puddingApp.filter('searchFor', function(){
-
-  // All filters must return a function. The first parameter
-  // is the data that is to be filtered, and the second is an
-  // argument that may be passed with a colon (searchFor:searchString)
-
-  return function(arr, searchString){
-
-    if(!searchString){
-      return arr;
-    }
-
-    var result = [];
-
-    searchString = searchString.toLowerCase();
-
-    // Using the forEach helper method to loop through the array
-    angular.forEach(arr, function(item){
-
-      if(item.title.toLowerCase().indexOf(searchString) !== -1){
-        result.push(item);
-      }
-
-    });
-
-    return result;
-  };
-
-});

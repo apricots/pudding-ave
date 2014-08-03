@@ -121,7 +121,6 @@ img.hide1{
 }
 
 .row {
-  height: 200px;
   .flavor {
     width: 25%;
     float: left;
@@ -212,6 +211,21 @@ img.hide1{
 }
 
 
+.mobile-pudding {
+  display: none;
+  text-align: center;
+}
+
+.order-mobile {
+  text-align: center;
+  background-color: #F5F5F5;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border:1px dashed $orange;
+  margin-bottom: 10px;
+  display:none;
+}
 
 
 
@@ -249,5 +263,43 @@ img.hide1{
       }
     }
   }
+
+  .pudding-cup {
+    display: none;
+  }
+
+  .row {
+    .flavor {
+      width: 100%;
+      float: left;
+      div {
+        height: 60px;
+        border:5px solid white;
+        background-color: #E6E6E6;
+      }
+      p {
+        display:none;
+      }
+    }
+    .cart {
+      width: 100%;
+      float: left;
+      height: auto;
+    }
+
+  }
+
+  .row .cart .box {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .mobile-pudding {
+    display: block;
+  }
+
+  .order-mobile {
+    display: block;
+  }
+
 }
 
