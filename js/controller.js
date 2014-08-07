@@ -33,7 +33,7 @@ var inventory = [
   }
 ];
 
-puddingApp.controller('FlavorCtrl', function($scope) {
+puddingApp.controller('FlavorCtrl', function($scope,$http) {
   $scope.cart = [];
 
   $scope.cart.addRemove = function(flavor) {
@@ -50,7 +50,6 @@ puddingApp.controller('FlavorCtrl', function($scope) {
         $scope.cart.push(inventory[i]);
         var cartIndex = $scope.cart.length - 1;
         $scope.cart[cartIndex].quantity = $scope.cart[cartIndex].quantity + 1;
-        console.log($scope.cart[cartIndex]);
         return;
       }
       // else {
@@ -90,37 +89,49 @@ puddingApp.controller('FlavorCtrl', function($scope) {
   //   $scope.total = total();
   // });
 
+  $scope.checkout = function() {
+    alert('Thanks for your pudding order. We love you.');
+  }
+
 
 });
 
-puddingApp.controller('ExampleController', ['$scope', function($scope) {
-  $scope.master = {};
-
-  $scope.update = function(user) {
-    $scope.master = angular.copy(user);
-  };
+puddingApp.controller('FormController', function($scope, $compile) {
+  'use strict';
+  $scope.data = { name: "", email: "", comment:""};
+  
 
   $scope.reset = function() {
-    $scope.user = angular.copy($scope.master);
+      $scope.data.name = "";
+      $scope.data.email = "";
+      $scope.data.comment = "";
+      $scope.form.$setPristine();
   };
 
-  $scope.reset();
-}]);
-
-puddingApp.controller('FormCtrl', function($scope, $http) {
-
-  var contantForm = {
-    name: "default",
-    email: "default",
-    comment: "default"
+  $scope.send = function() {
+    alert("We will get back to you shortly.")
   };
 
-  $scope.save = function() {
-    contactForm = $scope.form;
-  }
-
-  $scope.submitForm = function() {
-    
-  }
-
+  // $scope.reset();
 });
+
+
+// puddingApp.controller('FormCtrl', function($scope, $http) {
+
+//   var contantForm = {
+//     name: "default",
+//     email: "default",
+//     comment: "default"
+//   };
+
+//   $scope.save = function() {
+//     contactForm = $scope.form;
+//   }
+
+//   $scope.submitForm = function() {
+    
+//   }
+
+
+
+// });

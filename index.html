@@ -110,16 +110,17 @@
 					<h4>Pudding Cart</h4>
 					<div ng-repeat="flavor in cart track by $index">
 						<div>
-							<span class="flavor-name no-margin">{{flavor.name}} x <input type="text" name="{{flavor.name}}" size="1" ng-model="flavor.quantity"></span>
+							<span class="flavor-name no-margin">{{flavor.name}} x <input type="number" name="{{flavor.name}}" size="1" ng-model="flavor.quantity" class="quantity"></span>
 							<span class="flavor-price no-margin">{{flavor.price * flavor.quantity | currency }}</span>
 							<div class="clearfix"></div>
 						</div>
 					</div>
-					<div ng-if="cart.length > 0">
+					<div ng-if="cart.length > 0" class="cart-margin">
 						<hr class="divider">
 						<span class="cart-total-text no-margin">Total:</span>
 						<span class="cart-total no-margin">{{ total() | currency}}</span>
-						<div class='clearfix'></div>
+						<div class='clearfix'></div><br>
+						<center><a href="" ng-click="checkout()" class="button checkout-button" role="button">Checkout</a></center>
 					</div>
 					<div ng-if="cart.length === 0">
 						<center>no pudding yet <i class="fa fa-frown-o"></i></center>
@@ -156,46 +157,53 @@
 	<div class='info'>
 
 		<div class='map'>
-			<img src="images/map.png"/>
+			<div class="map-container">
+<!-- 				<img src="images/map2.png"/> -->
+<img src="http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284"/>
+			</div>
 		</div>
 
 		<div class='more-info'>
-			<div>
+			<div class="extra-info">
+				<p class="bold"><br>Address</p>
+				<p>172 Waverly Pl. New York, NY 10014</p>
 				<p class="bold">Phone:</p>
 				<p>(718) 223-2345</p>
 				<p class="bold">Hours: </p>
-				<p>Monday to Thursday | 9:00 - 18:00 <br> Friday to Sunday | 9:00 - 20:00</p>
+				<p><span class="hours">Tuesday to Sunday</span><span class="hours">9:00 - 18:00</span></p>
 				<p class="bold">Getting Here:</p>
-				<p><img src='images/trains.png'/> W 4th St.<br><img src="images/trains2.png"> Christopher St.</p>
+				<p><img src='images/trains.png'/> W 4th St.<!-- <br><img src="images/trains2.png"> Christopher St.</p> -->
 			</div>
 		</div>
 
 		<div class='contact-form'>
 			<div>
-				<p>Question, Comments, Concerns?
+				<p class="questions">Question, Comments, Concerns?
 				<br>Tell us your favorite flavor. Talk dirty to us.</p>
 				<!-- Desktop Version -->
-				<div ng-controller="ExampleController" class="desktop-form">
-				  <form novalidate class="css-form">
+				<div ng-controller="FormController" class="desktop-form">
+				  <form novalidate class="css-form" name="form" id="form">
 				    Name:
-				      <input type="text" ng-model="user.name" size="27"required /><br />
-				    E-mail: <input type="email" ng-model="user.email" size="27" required /><br />
+				      <input type="text" name="name" ng-model="data.name" class="comment-box" required /><br />
+				    E-mail: <input type="email" name="email" ng-model="data.email" class="comment-box" required /><br />
 				    Comments:
-				      <textarea rows="5" cols="25" ng-model"user.comment" required></textarea><br />
+				      <textarea rows="3" name="comment" ng-model="data.comment" class="comment-box" required></textarea><br />
+
+				    <button ng-click="send()">Send</button>
 				    <button ng-click="reset()">Reset</button>
-				    <button ng-click="update(user)">Send</button>
 				  </form>
 				</div>
 				<!-- Mobile Version -->
-				<div ng-controller="ExampleController" class="mobile-form">
+				<div ng-controller="FormController" class="mobile-form">
 				  <form novalidate class="css-form">
 				    Name:<br>
-				      <input type="text" ng-model="user.name" size="55" required /><br />
-				    E-mail: <br><input type="email" ng-model="user.email" size="55" required /><br />
+				      <input type="text" ng-model="user.name" size="40" required /><br />
+				    E-mail: <br><input type="email" ng-model="user.email" size="40" required /><br />
 				    Comments:<br>
-				      <textarea rows="5" cols="40" ng-model"user.comment" required></textarea><br />
-				    <button ng-click="reset()">Reset</button>
-				    <button ng-click="update(user)">Send</button>
+				      <textarea rows="5" class="comment-box" ng-model"user.comment" required></textarea><br />
+				    <button ng-click="setPristine()">Reset</button>
+				    <button ng-click="send()">Send</button>
 				  </form>
 				</div>
 			</div>

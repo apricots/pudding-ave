@@ -169,7 +169,8 @@ img.hide1{
       margin: 10px;
       height: 200px;
       border:2px dashed $orange;  
-      background-color: white;    
+      background-color: white; 
+      overflow: auto;   
     }
     h4 {
       text-align: left;
@@ -179,11 +180,16 @@ img.hide1{
       text-align: left;
       float: left;
       margin-left: 10px;
+      font-size: 13px;
     }
     .flavor-price {
       text-align: right;
       float: right;
       margin-right: 10px;
+      font-size: 13px;
+    }
+    .quantity {
+      width: 25px;
     }
     .cart-total-text {
       text-align: left;
@@ -200,6 +206,15 @@ img.hide1{
       margin-left: 10px;
       margin-right: 10px;
     }
+    .cart-margin {
+      margin-bottom: 10px;
+    }
+    .checkout-button {
+      padding: 2px 7px;
+      font-size: 15px;
+      text-align: center;
+    }
+
   }
 }
 
@@ -228,39 +243,68 @@ img.hide1{
 }
 
 .info {
+  height: 300px;
   .map {
     width: 50%;
     float: left;
+    height: 100%;
     img {
-      max-height: 100%;
-      max-width: 100%;
+  width: 100%;
+  height : 100%;
     }
   }
+  .map-container {
+    height: 100%;
+  }
   .more-info {
-    width: 25%;
-    height: auto;
-    float: left;
 
+    width: 25%;
+    float: left;
+    height: 100%;
+    .extra-info {
+      height: 100%;
+    }
     div {
       background-color: #F5F5F5;
-      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    p {
+      margin: 5px;
     }
 
     .bold {
       color: $orange;
       font-weight: bold;
+      margin: 3px;
     }
+  }
+  .questions {
+    margin: 10px;
   }
   .contact-form {
     width: 25%;
     float: left;
-    div {
-      margin-left: 10px;
+    // div {
+    //   margin-left: 10px;
 
-    }
+    // }
   }
   input {
     line-height: 2em;
+  }
+  .comment-box {
+    width: 100%;
+  }
+  .hours {
+    display: block;
+  }
+  .trains {
+    display:block;
+  }
+  .desktop-form {
+    margin: 10px;
   }
 }
 
@@ -366,12 +410,14 @@ img.hide1{
   }
 
   .info {
+    height: auto;
     .map {
       width: 100%;
       float: none;
+      height: auto;
       img {
-        max-height: 100%;
-        max-width: 100%;
+        height: 100%;
+        width: 100%;
       }
     }
     .more-info {
@@ -388,11 +434,15 @@ img.hide1{
     }
     .desktop-form {
       display: none;
+      margin: 10px;
     }
     .mobile-form {
       display: block;
+      margin: 10px;
     }
-
+    .map-container {
+      height: auto;
+    }
   }
 }
 
