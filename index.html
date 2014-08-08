@@ -110,7 +110,7 @@
 					<h4>Pudding Cart</h4>
 					<div ng-repeat="flavor in cart track by $index">
 						<div>
-							<span class="flavor-name no-margin">{{flavor.name}} x <input type="number" name="{{flavor.name}}" size="1" ng-model="flavor.quantity" class="quantity"></span>
+							<span class="flavor-name no-margin">{{flavor.name}} x <input type="number" name="{{flavor.name}}" size="1" ng-model="flavor.quantity" class="quantity" min="1"></span>
 							<span class="flavor-price no-margin">{{flavor.price * flavor.quantity | currency }}</span>
 							<div class="clearfix"></div>
 						</div>
